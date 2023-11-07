@@ -11,9 +11,7 @@ particle_list: list[Particle] = []
 for n in range(0, 100):
     particle_list.append(Particle((uniform(-100, 100), uniform(-100, 100)), 1))
 
-
 forces: dict[str, Force] = {}
-
 
 frame_: int = 0
 
