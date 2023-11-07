@@ -27,7 +27,7 @@ class Force(object):
         return ((self.x1 - self.x2)**2 + (self.y1 - self.y2)**2)**(1/2)
     
     def _get_force_value(self) -> None:
-        return (self.mass1 * self.mass2)/(self.r)**3
+        return (self.mass1 * self.mass2)/(self.r)**2
     
     def _get_x_force(self) -> None:
         return self.scalar_force * (self.x2 - self.x1)

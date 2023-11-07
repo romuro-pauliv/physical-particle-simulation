@@ -25,11 +25,21 @@ class Particle(object):
         self.x_list: list[float] = [self.x]
         self.y_list: list[float] = [self.y]
         
+        self.define_none_force(False)
+        
     def define_init_velocity(self, V: tuple[float, float]) -> None:
         self.x_velocity: float = V[0]
         self.y_velocity: float = V[1]
     
+    def define_none_force(self, active: bool = False) -> None:
+        self.none_force_button: bool = active
+    
     def define_force(self, F: tuple[float, float]) -> None:
+        if self.none_force_button == True:
+            self.x_force: float = 0
+            self.y_force: float = 0
+            return None
+        
         self.x_force: float = self.x_force + F[0]
         self.y_force: float = self.y_force + F[1]
     

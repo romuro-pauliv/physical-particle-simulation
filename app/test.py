@@ -1,21 +1,15 @@
 from classes.particle import Particle
 from classes.force import Force
 
-
 from animation.graph import MakeGraph
 
+from random import uniform
 
-particle_list: list[Particle] = [
-    Particle((5, 5), 1),
-    Particle((5, -5), 1),
-    Particle((-5, -5), 1),
-    Particle((-5, 5), 1)
-]
 
-particle_list[0].define_init_velocity((0, 0))
-particle_list[1].define_init_velocity((0, 0))
-particle_list[2].define_init_velocity((0, 0))
-particle_list[3].define_init_velocity((0, 0))
+particle_list: list[Particle] = []
+
+for n in range(0, 100):
+    particle_list.append(Particle((uniform(-100, 100), uniform(-100, 100)), 1))
 
 
 forces: dict[str, Force] = {}
@@ -23,7 +17,7 @@ forces: dict[str, Force] = {}
 
 frame_: int = 0
 
-while frame_ < 1000:
+while frame_ < 2000:
     
     particles_numb: int = len(particle_list)
     
@@ -46,6 +40,5 @@ while frame_ < 1000:
 
 
 make_graph: MakeGraph = MakeGraph(particle_list)
-
-make_graph._set_xylim((-10, 10), (-10, 10))
+make_graph._set_xylim((-100, 100), (-100, 100))
 make_graph.run()

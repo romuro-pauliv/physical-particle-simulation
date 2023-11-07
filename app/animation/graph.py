@@ -28,7 +28,7 @@ class MakeGraph(object):
     
     def _define_plot(self) -> None:
         for n, _ in enumerate(self.particle_list):
-            self.ax.plot([], [], label=f"P{n}")
+            self.ax.plot([], [], label=f"P{n}", color="gray", alpha=0.05)
     
     def _min_max_xy(self) -> None:
         x_min_list: list[float] = []
@@ -70,7 +70,7 @@ class MakeGraph(object):
             frames=self.data_length,
             init_func=self.init_plot_function,
             blit=False,
-            interval=1
+            interval=1.5
         )
         
         plt.show()
