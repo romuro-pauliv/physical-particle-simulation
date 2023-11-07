@@ -19,15 +19,6 @@ p1.define_init_velocity((0, 0))
 p2.define_init_velocity((0, 0))
 p3.define_init_velocity((0, 0))
 
-# for _ in range(0, 600):
-#     force: Force = Force(p1.get_particle(), p2.get_particle())
-    
-#     p1.define_force(force.get_p1_force())
-#     p2.define_force(force.get_p2_force())
-    
-#     p1.update_frame(0.01)
-#     p2.update_frame(0.01)
-
 
 for _ in range(0, 200):
     force_12: Force = Force(p1.get_particle(), p2.get_particle())
@@ -50,19 +41,10 @@ for _ in range(0, 200):
     p3.update_frame(0.01)
 
 
+
+
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-
-
-# plt.plot(p1.x_list, p1.y_list, color="green")
-# plt.plot(p2.x_list, p2.y_list, color="red")
-# plt.plot(p3.x_list, p3.y_list, color="blue")
-
-# plt.show()
-
-# plt.clf()
-
-
 
 fig, ax = plt.subplots()
 
