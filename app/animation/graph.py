@@ -9,7 +9,7 @@
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-from classes.particle import Particle
+from classes.particle.particle2D import Particle
 
 from typing import Union
 # |--------------------------------------------------------------------------------------------------------------------|
@@ -29,7 +29,7 @@ class MakeGraph(object):
     def _define_plot(self) -> None:
         for n, _ in enumerate(self.particle_list):
             self.ax.plot([], [], label=f"P{n}", alpha=0.5)
-    
+            
     def _min_max_xy(self) -> None:
         x_min_list: list[float] = []
         x_max_list: list[float] = []
