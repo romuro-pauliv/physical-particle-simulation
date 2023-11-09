@@ -7,7 +7,7 @@
 
 # | Imports |----------------------------------------------------------------------------------------------------------|
 from classes.particle.particle2D import Particle
-from classes.forces.newtonian_force import Force
+from classes.forces.newtonian_force2D import Force
 # |--------------------------------------------------------------------------------------------------------------------|
 
 

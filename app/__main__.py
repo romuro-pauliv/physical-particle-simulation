@@ -8,7 +8,7 @@
 # | Imports |----------------------------------------------------------------------------------------------------------|
 from classes.particle.particle2D import Particle
 
-from generator.newtonian_force import Generator
+from generator.newtonian_force2D import Generator
 
 from animation.graph import MakeGraph
 
