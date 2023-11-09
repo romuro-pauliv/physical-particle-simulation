@@ -13,6 +13,14 @@ from classes.forces.newtonian_force2D import Force
 
 class Generator(object):
     def __init__(self, frames_: int, particle_list: list[Particle], update_frame: float) -> None:
+        """
+        Constructor for the Generator class.
+
+        Args:
+        - frames_ (int): The total number of frames to generate.
+        - particle_list (list[Particle]): A list of Particle objects representing the particles in the system.
+        - update_frame (float): The time increment for each frame update.
+        """
         self.forces:            dict[str, Force]    = {}
         self.particle_list:     list[Particle]      = particle_list
         
@@ -21,6 +29,9 @@ class Generator(object):
         self.frames:        int     = frames_
 
     def _force_calculation(self) -> None:
+        """
+        Internal method to calculate forces between particles and store them in the `forces` dictionary.
+        """
         for particle_number in range(0, self.qnt_particles):
             for interaction in range(particle_number, self.qnt_particles):
                 if particle_number != interaction:
@@ -30,6 +41,9 @@ class Generator(object):
                     )
     
     def _define_force(self) -> None:
+        """
+        Internal method to define forces for each particle based on the calculated forces.
+        """
         for particle_number in range(0, self.qnt_particles):
             for interaction in range(particle_number, self.qnt_particles):
                 if particle_number != interaction:
@@ -41,11 +55,17 @@ class Generator(object):
                     )
     
     def _update_frame(self) -> None:
+        """
+        Internal method to update the state of each particle for the next frame.
+        """
         for particle in self.particle_list:
             particle.update_frame(self.update_frame)
     
     
     def generate(self) -> None:
+        """
+        Generates and updates the system state over multiple frames.
+        """
         frame: int = 0
         
         while frame < self.frames:
@@ -57,5 +77,11 @@ class Generator(object):
             frame += 1
     
     def get_particle_list(self) -> list[Particle]:
+        """
+        Returns the list of Particle objects representing the particles in the system.
+
+        Returns:
+        - list[Particle]: A list of Particle objects.
+        """
         return self.particle_list
             
