@@ -1,5 +1,5 @@
 # +--------------------------------------------------------------------------------------------------------------------|
-# |                                                                                            app.classes.particle.py |
+# |                                                                                 app.classes.particle.particle3D.py |
 # |                                                                                             Author: Pauliv, Rômulo |
 # |                                                                                          email: romulopauliv@bk.ru |
 # |                                                                                                    encoding: UTF-8 |

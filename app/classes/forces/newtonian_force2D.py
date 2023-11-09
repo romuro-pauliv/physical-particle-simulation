@@ -1,5 +1,5 @@
 # +--------------------------------------------------------------------------------------------------------------------|
-# |                                                                                               app.classes.force.py |
+# |                                                                            app.classes.forces.newtonian_force2D.py |
 # |                                                                                             Author: Pauliv, Rômulo |
 # |                                                                                          email: romulopauliv@bk.ru |
 # |                                                                                                    encoding: UTF-8 |
